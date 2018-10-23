@@ -2,9 +2,9 @@
     <div>
         <div class="title">周末去哪儿</div>
         <ul class="items">
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <div class="item-img-wrapper">
-                    <img class="item-img" :src="item.imgURL" alt="">            
+                    <img class="item-img" :src="item.imgUrl" alt="">            
                 </div>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -16,39 +16,14 @@
 </template>
 <script>
 export default {
-  name: "HomeWeekend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgURL:
-            "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
-          title: "北京温泉排行榜",
-          desc: "细数北京温泉，温暖你的冬天"
-        },
-        {
-          id: "0002",
-          imgURL:
-            "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
-          title: "北京温泉排行榜",
-          desc: "细数北京温泉，温暖你的冬天"
-        },
-        {
-          id: "0003",
-          imgURL:
-            "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
-          title: "北京温泉排行榜",
-          desc: "细数北京温泉，温暖你的冬天"
-        }
-      ]
-    };
-  }
+    name: "HomeWeekend",
+    props:{
+        list:Array
+    }
 };
 </script>
 <style lang="stylus" scoped>
 .title {
-    margin-top: 0.2rem;
     line-height: 0.8rem;
     background: #eee;
     text-indent: 0.2rem;
@@ -58,7 +33,7 @@ export default {
 .item-img-wrapper{
     height :0;
     overflow :hidden
-    padding-bottom :33.9% 
+    padding-bottom :33.71% 
 
     .item-img {
         width: 100%;

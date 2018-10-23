@@ -2,8 +2,8 @@
     <div>
         <div class="title">热销推荐</div>
         <ul class="items">
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
-                    <img class="item-img" :src="item.imgURL" alt="">            
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
+                    <img class="item-img" :src="item.imgUrl" alt="">            
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">{{item.desc}}</p>
@@ -16,25 +16,8 @@
 <script>
 export default {
   name: "HomeRecommend",
-  data(){
-      return{
-          recommendList:[{
-              id:'0001',
-              imgURL:'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-              title:'北京温泉排行榜',
-              desc:'细数北京温泉，温暖你的冬天'
-          },{
-              id:'0002',
-              imgURL:'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-              title:'北京温泉排行榜',
-              desc:'细数北京温泉，温暖你的冬天'
-          },{
-              id:'0003',
-              imgURL:'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
-              title:'北京温泉排行榜',
-              desc:'细数北京温泉，温暖你的冬天'
-          }]
-      }
+  props:{
+      list:Array
   }
 };
 </script>
