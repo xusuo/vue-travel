@@ -1,7 +1,9 @@
-<template>    
+<template>
     <div class="header">
-        城市选择        
-        <div class="iconfont header-back">&#xe624;</div>
+        城市详情
+        <router-link to="/">
+            <div class="iconfont back-icon">&#xe624;</div>
+        </router-link>
     </div>
 </template>
 <script>
@@ -10,23 +12,21 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-    .header{
-        position :relative
-        overflow :hidden
-        text-align :center
+.header{
+    position :relative
+    height :.86rem
+    line-height :.86rem
+    background :#00bcd4
+    font-size :.32rem
+    text-align :center
+    color :#fff
+    .back-icon{
+        position :absolute
+        top: 0
+        left :0
+        width :.64rem
+        font-size :.4rem
         color :#fff
-        background :#00bcd4
-        height :.86rem
-        line-height :.86rem
-        font-size  :.32rem
-        .header-back{
-            position :absolute
-            width :.64rem
-            font-size :.4rem
-            top :0
-            left :0
-            color :#fff
-        }
     }
+}
 </style>
-
